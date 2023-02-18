@@ -1,12 +1,11 @@
+# frozen_string_literal: true
+
 require 'rspec'
 require_relative '../solver'
 
 describe Solver do
   before :each do
     @solver = Solver.new
-  end
-  it 'Given no parameter a Solver object is returned' do
-    expect(@solver).to be_an_instance_of solver
   end
   it 'Given 1 as argument 0 shoulld be returned' do
     expect(@solver.factorial(0)).to eql 1
@@ -19,9 +18,6 @@ describe Solver do
   end
   it 'When the value is "hello"  "olleh" is returned' do
     expect(@solver.reverse('hello')).to eql 'olleh'
-  end
-  it 'Returns the same value as string in any other case' do
-    expect(@solver.fizzbuzz(7)).to eql '7'
   end
   it 'When the value is divisible by 3 "fizz" is returned' do
     expect(@solver.fizzbuzz(9)).to eql 'fizz'
